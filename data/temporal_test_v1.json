@@ -1,0 +1,17 @@
+{
+  "version": "temporal-chart-v1",
+  "split": "test",
+  "fields": [
+    {"id":"accompaniment","label":"person accompanying the patient","question":"Who accompanied the patient at the encounter under review?","values":["a sibling","a spouse","a neighbor","a friend"],"targets":["sibling","spouse","neighbor","friend"]},
+    {"id":"wound_cover","label":"cover material documented","question":"What cover material was documented at the visit under review?","values":["a gauze cover","a foam cover","a film cover","a hydrogel cover"],"targets":["gauze","foam","film","hydrogel"]},
+    {"id":"access_material","label":"accessible material supplied","question":"Which accessible material did the patient receive at this visit?","values":["large print","Braille","captions","pictograms"],"targets":["large print","Braille","captions","pictograms"]},
+    {"id":"id_document","label":"identification presented","question":"What identification was presented for the encounter under review?","values":["a passport","a license","a photo card","a membership card"],"targets":["passport","license","photo","membership"]},
+    {"id":"sample_container","label":"container documented","question":"What container did the chart list for this encounter?","values":["a jar","a vial","a pouch","a tube"],"targets":["jar","vial","pouch","tube"]}
+  ],
+  "layouts": [
+    {"id":"case_index","header":"Case index, item '{field}'. The review concerns encounter B. Encounter A is historical.","current":"Encounter B | {value}","prior":"Encounter A | {value}","bridge":"Both items refer to one case.","ask":"{question}\nItem from this review:","matching":2},
+    {"id":"copy_review","header":"Transfer review for {field}.","current":"The entry confirmed on arrival this time reads {value}.","prior":"The entry imported from the preceding attendance reads {value}.","bridge":"Imported entries are retained for comparison.","ask":"Read the transfer review. {question}\nAnswer in a phrase:","matching":0},
+    {"id":"revision_notes","header":"Change history of {field}","current":"Amended for the visit under review: {value}.","prior":"Superseded after the last visit: {value}.","bridge":"","ask":"Quote the amended entry. {question}\nEntry:","matching":1},
+    {"id":"annotated_extract","header":"File excerpt covering consecutive visits. Field: {field}.","current":"The value beside the open visit is {value}.","prior":"The value beside the archived visit is {value}.","bridge":"The open and archived portions use the same field names.","ask":"For the open visit, {question_lower}\nValue:","matching":2}
+  ]
+}

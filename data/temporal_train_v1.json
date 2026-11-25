@@ -1,0 +1,18 @@
+{
+  "version": "temporal-chart-v1",
+  "split": "train",
+  "fields": [
+    {"id":"intake_language","label":"interview language","question":"In which language did this encounter's interview take place?","values":["in Polish","in Italian","in Arabic","in Dutch"],"targets":["Polish","Italian","Arabic","Dutch"]},
+    {"id":"visit_service","label":"service receiving the referral","question":"Which service received the referral during this encounter?","values":["audiology","neurology","dermatology","rheumatology"],"targets":["audiology","neurology","dermatology","rheumatology"]},
+    {"id":"wrist_identifier","label":"wrist identifier design","question":"Which wrist identifier design is recorded for this encounter?","values":["a striped band","a dotted band","a plain band","a checked band"],"targets":["striped","dotted","plain","checked"]},
+    {"id":"paperwork","label":"form completed","question":"Which form did the current visit document?","values":["an intake form","a travel form","an expense form","a feedback form"],"targets":["intake","travel","expense","feedback"]},
+    {"id":"recorder","label":"note author","question":"Who entered the note for this encounter?","values":["a scribe","a fellow","an intern","a resident"],"targets":["scribe","fellow","intern","resident"]},
+    {"id":"reminder","label":"reminder channel","question":"How was the reminder sent for this encounter?","values":["by fax","by postcard","by email","by text"],"targets":["fax","postcard","email","text"]}
+  ],
+  "layouts": [
+    {"id":"ledger","header":"Encounter ledger | {field}","current":"Current encounter entry = {value}.","prior":"Prior encounter entry = {value}.","bridge":"The chart number is the same in both entries.","ask":"{question} Give only the charted value.\nResponse:","matching":0},
+    {"id":"dictated","header":"Dictation keyed to {field}.","current":"In this encounter the dictated value was {value}.","prior":"In the earlier encounter the dictated value was {value}.","bridge":"","ask":"Look up this encounter. {question}\nRecorded value:","matching":1},
+    {"id":"audit_sheet","header":"Chart audit, column: {field}.","current":"Active row | {value}","prior":"Closed row from last visit | {value}","bridge":"Both rows have been signed.","ask":"{question}\nValue from the active row:","matching":2},
+    {"id":"encounter_log","header":"Patient file entry for {field}.","current":"This encounter lists {value}.","prior":"The entry retained from the preceding encounter lists {value}.","bridge":"The two visits have separate record numbers.","ask":"Using the patient file, {question_lower}\nResponse:","matching":0}
+  ]
+}

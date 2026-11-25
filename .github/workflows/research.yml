@@ -10,6 +10,7 @@ on:
       - 'tests/research/**'
       - 'contracts/research-trace.v1.schema.json'
       - 'artifacts/baseline/**'
+      - 'artifacts/temporal-v2/**'
       - 'requirements-research.txt'
       - '.gitattributes'
       - '.github/workflows/research.yml'

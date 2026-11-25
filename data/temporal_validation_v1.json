@@ -1,0 +1,15 @@
+{
+  "version": "temporal-chart-v1",
+  "split": "validation",
+  "fields": [
+    {"id":"record_format","label":"recording format used","question":"Which format was used for today's recording?","values":["a voice memo","a written transcript","a video clip","a typed summary"],"targets":["voice","written","video","typed"]},
+    {"id":"clinic_desk","label":"check-in counter","question":"At which counter did this visit's check-in occur?","values":["the maple counter","the cedar counter","the birch counter","the willow counter"],"targets":["maple","cedar","birch","willow"]},
+    {"id":"pressure_device","label":"equipment identified on inventory","question":"Which device was listed in the inventory for today's evaluation?","values":["a thermometer","an otoscope","a spirometer","a stethoscope"],"targets":["thermometer","otoscope","spirometer","stethoscope"]},
+    {"id":"assessment_focus","label":"assessment focus recorded","question":"Which assessment focus was recorded at this visit?","values":["balance","hearing","vision","speech"],"targets":["balance","hearing","vision","speech"]}
+  ],
+  "layouts": [
+    {"id":"tab_history","header":"History pane for {field}.","current":"Selected tab (today): {value}.","prior":"Archived tab (previous appointment): {value}.","bridge":"The archive remains available from the selected tab.","ask":"{question}\nSelection:","matching":1},
+    {"id":"signed_extract","header":"Signed extract | {field}","current":"Most recent signed encounter shows {value}.","prior":"An older signed encounter shows {value}.","bridge":"","ask":"Consult the extract for the present encounter. {question}\nResult:","matching":2},
+    {"id":"visit_labels","header":"Two labeled entries under {field}.","current":"Visit in progress: {value}","prior":"Visit already closed: {value}","bridge":"The entries were transcribed from the same file.","ask":"{question} State the value from the visit in progress.\nAnswer:","matching":0}
+  ]
+}

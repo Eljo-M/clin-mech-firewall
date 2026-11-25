@@ -67,11 +67,15 @@ def _chart_pair(version, layout, field, group_id, current, alternative, prior):
         )
 
 
-def build_dataset() -> list[Example]:
+def build_dataset(split: str | None = None) -> list[Example]:
     """Return deterministic examples. A label of 1 means unsupported at this visit."""
+    if split is not None and split not in ("train", "validation", "test"):
+        raise ValueError("split must be train, validation, or test")
     source = json.loads(SOURCE.read_text(encoding="utf-8"))
     examples = []
     for layout_index, layout in enumerate(source["layouts"]):
+        if split is not None and layout["split"] != split:
+            continue
         for field_index, field in enumerate(source["fields"]):
             for match_index, (left, right) in enumerate(layout["matchings"]):
                 # Half of the quartets require distinguishing prior from current.

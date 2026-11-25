@@ -1,0 +1,257 @@
+{
+  "schema_version": "temporal-development.v1",
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "layer": 12,
+  "original_probe_sha256": "3c7bd6c3ab4547618a013f4aae07e1ad69708ca151064ba3b8da8b230d945350",
+  "models": {
+    "frozen-v1": {
+      "validation": {
+        "overall": {
+          "n": 384,
+          "tp": 125,
+          "fp": 21,
+          "tn": 171,
+          "fn": 67,
+          "auroc": 0.858669704861111,
+          "f1": 0.7396449704142012,
+          "false_positive_rate": 0.109375,
+          "recall": 0.6510416666666666,
+          "accuracy": 0.7708333333333334,
+          "precision": 0.8561643835616438
+        },
+        "by_layout": {
+          "signed_extract": {
+            "n_supported": 64,
+            "fp": 4,
+            "fpr": 0.0625
+          },
+          "tab_history": {
+            "n_supported": 64,
+            "fp": 10,
+            "fpr": 0.15625
+          },
+          "visit_labels": {
+            "n_supported": 64,
+            "fp": 7,
+            "fpr": 0.109375
+          }
+        },
+        "by_location": {
+          "prior": {
+            "n_errors": 96,
+            "tp": 34,
+            "recall": 0.3541666666666667
+          },
+          "absent": {
+            "n_errors": 96,
+            "tp": 91,
+            "recall": 0.9479166666666666
+          }
+        },
+        "feasible": false
+      },
+      "threshold": 0.9552176915681485,
+      "file": "frozen-v1.json",
+      "sha256": "3c7bd6c3ab4547618a013f4aae07e1ad69708ca151064ba3b8da8b230d945350"
+    },
+    "recalibrated-v1": {
+      "validation": {
+        "overall": {
+          "n": 384,
+          "tp": 118,
+          "fp": 15,
+          "tn": 177,
+          "fn": 74,
+          "auroc": 0.858669704861111,
+          "f1": 0.7261538461538461,
+          "false_positive_rate": 0.078125,
+          "recall": 0.6145833333333334,
+          "accuracy": 0.7682291666666666,
+          "precision": 0.8872180451127819
+        },
+        "by_layout": {
+          "signed_extract": {
+            "n_supported": 64,
+            "fp": 3,
+            "fpr": 0.046875
+          },
+          "tab_history": {
+            "n_supported": 64,
+            "fp": 6,
+            "fpr": 0.09375
+          },
+          "visit_labels": {
+            "n_supported": 64,
+            "fp": 6,
+            "fpr": 0.09375
+          }
+        },
+        "by_location": {
+          "prior": {
+            "n_errors": 96,
+            "tp": 30,
+            "recall": 0.3125
+          },
+          "absent": {
+            "n_errors": 96,
+            "tp": 88,
+            "recall": 0.9166666666666666
+          }
+        },
+        "feasible": true
+      },
+      "threshold": 0.9740611507233753,
+      "file": "recalibrated-v1.json",
+      "sha256": "b0b274d695947fb3fc6d27f00d16f810bd40c894a980a361b8e21093b31be3cf"
+    },
+    "balanced-v2": {
+      "validation": {
+        "overall": {
+          "n": 384,
+          "tp": 119,
+          "fp": 15,
+          "tn": 177,
+          "fn": 73,
+          "auroc": 0.873291015625,
+          "f1": 0.7300613496932515,
+          "false_positive_rate": 0.078125,
+          "recall": 0.6197916666666666,
+          "accuracy": 0.7708333333333334,
+          "precision": 0.8880597014925373
+        },
+        "by_layout": {
+          "signed_extract": {
+            "n_supported": 64,
+            "fp": 5,
+            "fpr": 0.078125
+          },
+          "tab_history": {
+            "n_supported": 64,
+            "fp": 4,
+            "fpr": 0.0625
+          },
+          "visit_labels": {
+            "n_supported": 64,
+            "fp": 6,
+            "fpr": 0.09375
+          }
+        },
+        "by_location": {
+          "prior": {
+            "n_errors": 96,
+            "tp": 26,
+            "recall": 0.2708333333333333
+          },
+          "absent": {
+            "n_errors": 96,
+            "tp": 93,
+            "recall": 0.96875
+          }
+        },
+        "feasible": true
+      },
+      "threshold": 0.9276687148704176,
+      "file": "balanced-v2.json",
+      "sha256": "62ab3b192b4ec28b7a231d907e69e40e1308dfa671466f79bb1735ae2111e80f"
+    },
+    "prior-weighted-v2": {
+      "validation": {
+        "overall": {
+          "n": 384,
+          "tp": 118,
+          "fp": 12,
+          "tn": 180,
+          "fn": 74,
+          "auroc": 0.8690321180555557,
+          "f1": 0.7329192546583851,
+          "false_positive_rate": 0.0625,
+          "recall": 0.6145833333333334,
+          "accuracy": 0.7760416666666666,
+          "precision": 0.9076923076923077
+        },
+        "by_layout": {
+          "signed_extract": {
+            "n_supported": 64,
+            "fp": 5,
+            "fpr": 0.078125
+          },
+          "tab_history": {
+            "n_supported": 64,
+            "fp": 1,
+            "fpr": 0.015625
+          },
+          "visit_labels": {
+            "n_supported": 64,
+            "fp": 6,
+            "fpr": 0.09375
+          }
+        },
+        "by_location": {
+          "prior": {
+            "n_errors": 96,
+            "tp": 26,
+            "recall": 0.2708333333333333
+          },
+          "absent": {
+            "n_errors": 96,
+            "tp": 92,
+            "recall": 0.9583333333333334
+          }
+        },
+        "feasible": true
+      },
+      "threshold": 0.9533648688310457,
+      "file": "prior-weighted-v2.json",
+      "sha256": "60a6c8dab29e9323f1ccc39903f2084a865f39e2e5778b679fba72e2cfbd489e"
+    }
+  },
+  "selected": "recalibrated-v1",
+  "candidate_order": [
+    "recalibrated-v1",
+    "balanced-v2",
+    "prior-weighted-v2"
+  ],
+  "threshold_rule": "on validation, allow at most 10% supported false alarms in each layout; maximize prior true positives, then absent true positives, then minimize total false positives, then choose the largest tied threshold",
+  "model_selection": "maximize prior TP, absent TP, then minimize total FP, among feasible candidates; exact ties resolve in candidate_order",
+  "loss": {
+    "balanced-v2": "train-standardized logistic BCE, L2=0.1",
+    "prior-weighted-v2": "same loss; prior-location chart pairs replicated 3x before standardization"
+  },
+  "rows": {
+    "v1_train": 160,
+    "temporal_train": 768,
+    "temporal_validation": 384
+  },
+  "row_order": [
+    "v1_train",
+    "temporal_train",
+    "temporal_validation"
+  ],
+  "validation_layouts": {
+    "signed_extract": 128,
+    "tab_history": 128,
+    "visit_labels": 128
+  },
+  "device": "cuda",
+  "dtype": "float16",
+  "threads": 4,
+  "batch_size": 8,
+  "seed": 1729,
+  "attention": "eager",
+  "device_name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "python": "3.12.14",
+  "transformers": "4.53.3",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.2.6",
+  "cuda_runtime": "12.8",
+  "sha256": {
+    "activations.npz": "a6fa1fb02d50d8afd12400b5d468d0c7fb062052dcbc6aa4fdf5446719b2e329",
+    "balanced-v2.json": "62ab3b192b4ec28b7a231d907e69e40e1308dfa671466f79bb1735ae2111e80f",
+    "development.jsonl": "bd22f8fc1b6cd6c568ff0558fd1464f4fb2df68a675a52984cca77229e219396",
+    "frozen-v1.json": "3c7bd6c3ab4547618a013f4aae07e1ad69708ca151064ba3b8da8b230d945350",
+    "prior-weighted-v2.json": "60a6c8dab29e9323f1ccc39903f2084a865f39e2e5778b679fba72e2cfbd489e",
+    "recalibrated-v1.json": "b0b274d695947fb3fc6d27f00d16f810bd40c894a980a361b8e21093b31be3cf",
+    "validation-predictions.jsonl": "043c6c821e65a165c8c09106c42d4dafefd742b44fbb367d0d216642045f6cba"
+  }
+}
