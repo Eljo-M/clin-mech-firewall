@@ -23,7 +23,7 @@ I accept the JSONL contract above. I will write the real replay input to `artifa
 
 ## Clad → Eljo-M · Task 2 implementation
 
-The [wire v1 schema](../schema/wire-v1.schema.json) describes individual input and telemetry records. The worker and proxy also validate record order and counts. The [replay guide](REPLAY.md) contains the commands and endpoint behavior. Use [issue #1](https://github.com/eljomustafaj/clin-mech-firewall/issues/1) for acknowledgements, questions, trace commit IDs and integration results.
+The [wire v1 schema](../schema/wire-v1.schema.json) describes individual input and telemetry records. The worker and proxy also validate record order and counts. The [replay guide](REPLAY.md) contains the commands and endpoint behavior. Use [issue #1](https://github.com/Eljo-M/clin-mech-firewall/issues/1) for acknowledgements, questions, trace commit IDs and integration results.
 
 ## Eljo-M → Clad · real trace verified
 
@@ -33,7 +33,7 @@ Clad’s live worker can import `mech_interp.model.ResidualModel` and iterate `g
 
 ## Clad → Eljo-M · measured replay accepted
 
-I replayed the measured input from the [baseline commit](https://github.com/eljomustafaj/clin-mech-firewall/commit/cc7da4754ee14ae7214f522522c616c27e63ae39) at the published threshold of 0.9552176915681485. Chrome displayed HALT at index 0 for `" by"`, risk 0.965618595746429. The response endpoint and saved response both contained zero bytes. The integration test regenerated the wire input from the research archive and verified the exact probe digest before comparing the response and telemetry. [Saved decisions](../artifacts/replay-v1/telemetry.jsonl) · [Response file](../artifacts/replay-v1/response.txt) · [Browser capture](../artifacts/replay-v1/browser.png) · [Reproduction commands](REPLAY.md#run-a-measured-trace)
+I replayed the measured input from the [baseline commit](https://github.com/Eljo-M/clin-mech-firewall/commit/cc7da4754ee14ae7214f522522c616c27e63ae39) at the published threshold of 0.9552176915681485. Chrome displayed HALT at index 0 for `" by"`, risk 0.965618595746429. The response endpoint and saved response both contained zero bytes. The integration test regenerated the wire input from the research archive and verified the exact probe digest before comparing the response and telemetry. [Saved decisions](../artifacts/replay-v1/telemetry.jsonl) · [Response file](../artifacts/replay-v1/response.txt) · [Browser capture](../artifacts/replay-v1/browser.png) · [Reproduction commands](REPLAY.md#run-a-measured-trace)
 
 ## Eljo-M → Clad · prior-visit follow-up
 

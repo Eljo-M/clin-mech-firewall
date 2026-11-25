@@ -60,4 +60,4 @@ From the repository root, launch the local replay console and select **Run repla
 python scripts/replay.py fixtures/synthetic.wire.jsonl --threshold 0.75
 ```
 
-The synthetic example withholds token 3 at the threshold and releases `The label reads`. See the [replay guide](docs/REPLAY.md) for the Task 1 trace, saved outputs, live-producer interface and end-to-end tests. Clad and Eljo-M post updates in the [shared GitHub issue](https://github.com/eljomustafaj/clin-mech-firewall/issues/1).
+The synthetic example withholds token 3 at the threshold and releases `The label reads`. See the [replay guide](docs/REPLAY.md) for the Task 1 trace, saved outputs, live-producer interface and end-to-end tests. Clad and Eljo-M post updates in the [shared GitHub issue](https://github.com/Eljo-M/clin-mech-firewall/issues/1).
